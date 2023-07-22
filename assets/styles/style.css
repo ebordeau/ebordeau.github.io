@@ -1,0 +1,73 @@
+body {
+  background: #eee;
+  color: #333;
+  display: grid;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+  grid-template-columns: 25% 75%;
+  grid-template-rows: min-content 1fr;
+  height: 100vh;
+  justify-items: stretch;
+  margin: 0;
+  width: 100vw;
+}
+
+[part="header"] {
+  align-items: center;
+  background: #025d8c;
+  color: #fff;
+  font-weight: 100;
+  grid-area: header;
+  padding: 2rem;
+  text-align: center;
+}
+
+[part="header-name"] {
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+  padding: 1rem 5rem;
+  text-transform: uppercase;
+}
+
+[part="header-separator"] {
+  background: #fff;
+  height: 1px;
+  margin: auto;
+  width: 8rem;
+}
+
+[part="header-title"] {
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  padding: 1rem;
+}
+
+[part="sidebar"] {
+  align-self: stretch;
+  background: #fafafa;
+  color: #035c8c;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+  gap: 1rem;
+  grid-area: sidebar;
+  padding: 2rem;
+  text-align: right;
+}
+
+[part="sidebar"] a {
+  --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
+  color: #035c8c;
+  text-decoration: none;
+}
+
+[part="main"] {
+  align-self: stretch;
+  background: #fff;
+  grid-area: main;
+  padding: 2rem;
+}
