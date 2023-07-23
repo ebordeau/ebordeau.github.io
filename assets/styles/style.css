@@ -50,6 +50,7 @@ header {
 [part="sidebar"] {
   align-self: stretch;
   background: #fafafa;
+  border-right: 1px solid #ddd;
   color: #035c8c;
   display: flex;
   flex-direction: column;
@@ -61,7 +62,6 @@ header {
 }
 
 [part="sidebar"] a {
-  --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
   color: #035c8c;
   text-decoration: none;
 }
@@ -83,7 +83,7 @@ section h3 {
   font-size: 1.5rem;
 }
 
-.position {
+.position:not(:last-child) {
   padding-bottom: 2rem;
 }
 
